@@ -7,41 +7,220 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+    <!-- Content goes here -->
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Charity Water Landing</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      scroll-behavior: smooth;
+    }
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+    /* Hero Section */
+    .hero {
+      background: #0d2b59;
+      color: white;
+      padding: 2rem;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+    /* Header bar */
+    .hero-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .tag-btn {
+      background: #d2691e;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .tag-btn:hover {
+      background: #b85818;
+    }
+
+    /* Hero content */
+    .hero-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 500px;
+      flex: 1;
+      margin-right: 2rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin: 0 0 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+
+    /* CTA container */
+    .cta-box {
+      background: white;
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden;
+      max-width: 450px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .cta-left {
+      flex: 1;
+      text-align: center;
+      padding: 1rem;
+      color: #f28b82;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cta-right {
+      background: #d2691e;
+      color: white;
+      padding: 1rem 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.3s ease, transform 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cta-right:hover {
+      background: #b85818;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Right images */
+    .hero-images {
+      flex: 1;
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .hero-images img {
+      width: 220px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
+    /* Info Section */
+    .info-section {
+      padding: 3rem 2rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .info-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #0d2b59;
+    }
+
+    .info-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-text {
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+
+      .hero-images {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <!-- Header bar -->
+    <div class="hero-header">
+      <div class="logo">
+        <img src="https://via.placeholder.com/40x40" alt="Logo">
+        <span>charity: water</span>
+      </div>
+      <button class="tag-btn" onclick="document.getElementById('info').scrollIntoView()">Fuel Clean Water</button>
+    </div>
+
+    <!-- Hero body -->
+    <div class="hero-content">
+      <!-- Left Side -->
+      <div class="hero-text">
+        <h1>Track Your Impact.<br>Change the World.</h1>
+        <p>Join charity: water and see exactly how your support brings clean water to communities—one project, one life at a time.</p>
+        <div class="cta-box">
+          <div class="cta-left">SEE YOUR IMPACT</div>
+          <div class="cta-right" onclick="document.getElementById('info').scrollIntoView()">Start A Water Project Today</div>
         </div>
-    </section>
+      </div>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+      <!-- Right Side Images -->
+      <div class="hero-images">
+        <img src="https://via.placeholder.com/220x280" alt="Project Image">
+        <img src="https://via.placeholder.com/220x280" alt="Water Image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section id="info" class="info-section">
+    <h2>Why Clean Water Matters</h2>
+    <p>Clean water changes everything. It improves health, boosts education, and empowers communities to thrive. By joining our mission, you're not only funding wells, but also creating sustainable futures for generations to come.</p>
+  </section>
 </body>
 </html>
